@@ -1,8 +1,12 @@
 
 package com.spikes2212.robot;
 
+import com.ctre.CANTalon;
+import com.spikes2212.robot.components.MotorGroup;
 import com.spikes2212.robot.subsystems.*;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -19,6 +23,16 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 
 		// init subsystems
+
+		drivetrain = new Drivetrain(new MotorGroup(new CANTalon(RobotMap.CAN.LEFT_MOTOR_1),
+				new CANTalon(RobotMap.CAN.LEFT_MOTOR_2)),
+				new MotorGroup(new CANTalon(RobotMap.CAN.RIGHT_MOTOR_1), new CANTalon(RobotMap.CAN.RIGHT_MOTOR_2)));
+		loader = new Loader(new VictorSP(RobotMap.PWM.LOADER_MOTOR_1), new VictorSP(RobotMap.PWM.LOADER_LOADER_2));
+		feeder = new Feeder(new VictorSP(RobotMap.PWM.FEEDER_MOTOR));
+		shooter = new Shooter(new CANTalon(RobotMap.CAN.SHOOTER_MOTOR));
+		gearDropper = new GearDropper(new VictorSP(RobotMap.PWM.GEAR_DROPPER_MOTOR),
+				new DigitalInput(RobotMap.DIO.GEAR_DROPPER_OPEN),
+				new DigitalInput(RobotMap.DIO.GEAR_DROPPER_CLOSE));
 
 		// init oi
 

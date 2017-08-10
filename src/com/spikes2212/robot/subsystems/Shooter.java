@@ -8,14 +8,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Shooter extends Subsystem {
 
     private SpeedController motor;
-    private Encoder encoder;
-
 
     public static final double SHOOTING_SPEED = 0.2;
 
-    public Shooter(SpeedController motor, Encoder encoder) {
+    public Shooter(SpeedController motor) {
         this.motor = motor;
-        this.encoder = encoder;
     }
 
     public void move(double speed) {

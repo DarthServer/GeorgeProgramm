@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="CAN">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../lib/CAN/java/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../lib/CAN/java/docs/CTRLib" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../lib/CAN/java/lib" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../lib/CAN/java/lib" recursive="false" />
+  </library>
+</component>

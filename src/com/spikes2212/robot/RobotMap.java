@@ -5,8 +5,9 @@ public class RobotMap {
 
 
     public static interface PWM {
-        public static final int LOADER_MOTOR = 2;
-        public static final int FEEDER_MOTOR = 3;
+        public static final int LOADER_MOTOR_1  = 2;
+        public static final int LOADER_LOADER_2 = 3;
+        public static final int FEEDER_MOTOR = 0;
         public static final int GEAR_DROPPER_MOTOR = 1;
 
 

@@ -66,5 +66,6 @@
     </orderEntry>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="wpilib" level="project" />
+    <orderEntry type="library" name="CAN" level="project" />
   </component>
 </module>
