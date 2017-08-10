@@ -8,10 +8,12 @@ public class Shoot extends Command {
     private double speed;
 
     public Shoot(double speed) {
+    	requires(Robot.shooter);
         this.speed = speed;
     }
     @Override
     protected void execute() {
+    	Robot.shooter.move(speed);
     }
 
     @Override

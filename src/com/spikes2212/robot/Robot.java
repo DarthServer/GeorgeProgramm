@@ -3,15 +3,17 @@ package com.spikes2212.robot;
 
 import com.ctre.CANTalon;
 import com.spikes2212.robot.components.MotorGroup;
-import com.spikes2212.robot.subsystems.*;
+import com.spikes2212.robot.subsystems.Drivetrain;
+import com.spikes2212.robot.subsystems.Feeder;
+import com.spikes2212.robot.subsystems.GearDropper;
+import com.spikes2212.robot.subsystems.Loader;
+import com.spikes2212.robot.subsystems.Shooter;
+
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.VictorSP;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends IterativeRobot {
 	public static Loader loader;
 	public static Drivetrain drivetrain;

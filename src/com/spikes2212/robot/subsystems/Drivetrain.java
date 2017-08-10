@@ -1,5 +1,8 @@
 package com.spikes2212.robot.subsystems;
 
+import com.spikes2212.robot.Robot;
+import com.spikes2212.robot.commands.basic.DriveTank;
+
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -24,6 +27,6 @@ public class Drivetrain extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
-
+    	setDefaultCommand(new DriveTank(Robot.oi::getLeft, Robot.oi::getRight));
     }
 }

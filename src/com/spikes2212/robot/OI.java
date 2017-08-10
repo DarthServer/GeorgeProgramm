@@ -3,6 +3,8 @@ package com.spikes2212.robot;
 import com.spikes2212.robot.commands.basic.Feed;
 import com.spikes2212.robot.commands.basic.MoveGearDropper;
 import com.spikes2212.robot.commands.groups.LoadAndShoot;
+import com.spikes2212.robot.subsystems.GearDropper;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -26,7 +28,7 @@ public class OI /* GEVALD */ {
 
         shootButton.whileHeld(new LoadAndShoot());
 
-        droppGearButton.whenPressed(new MoveGearDropper(1));
+        droppGearButton.whenPressed(new MoveGearDropper(GearDropper.OPEN_DROPPER_SPEED));
 
         feedButton.whileHeld(new Feed());
     }

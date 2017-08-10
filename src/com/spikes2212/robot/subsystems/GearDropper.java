@@ -10,6 +10,9 @@ public class GearDropper extends Subsystem {
     private SpeedController motor;
     private DigitalInput openSwitch;
     private DigitalInput closeSwitch;
+    
+    public static final double OPEN_DROPPER_SPEED = 0.1;
+    public static final double CLOSE_DROPPER_SPEED = -0.1;
 
 
     public GearDropper(SpeedController motor, DigitalInput openSwitch, DigitalInput closeSwitch) {
@@ -28,6 +31,6 @@ public class GearDropper extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
-        setDefaultCommand(new MoveGearDropper(-1));
+         setDefaultCommand(new MoveGearDropper(CLOSE_DROPPER_SPEED));
     }
 }

@@ -1,3 +1,4 @@
+
 package com.spikes2212.robot;
 
 
@@ -31,13 +32,13 @@ public class RobotMap {
     }
 
     public static interface JOYSTICK {
-        public static final int LEFT_JOYSTICK = 1;
-        public static final int RIGHT_JOYSTICK = 2;
+        public static final int LEFT_JOYSTICK = 0;
+        public static final int RIGHT_JOYSTICK = 1;
 
 
-        public static final int SHOOT_BUTTON = 3;
-        public static final int DROPP_GEAR_BUTTON = 4;
-        public static final int FEED_BUTTON = 5;
+        public static final int SHOOT_BUTTON = 1;
+        public static final int DROPP_GEAR_BUTTON = 3;
+        public static final int FEED_BUTTON = 2;
 
     }
 }
