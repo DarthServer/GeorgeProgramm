@@ -16,13 +16,13 @@ public class GearDropper extends Subsystem {
 
 
     public GearDropper(SpeedController motor, DigitalInput openSwitch, DigitalInput closeSwitch) {
+        this.motor = motor;
         this.closeSwitch = closeSwitch;
         this.openSwitch = openSwitch;
-        this.motor = motor;
     }
 
     public boolean canMove(double speed) {
-        return !((speed > 0 && openSwitch.get()) || (speed < 0 && closeSwitch.get()));
+        return !((speed < 0 && openSwitch.get()) || (speed > 0 && closeSwitch.get()));
     }
 
     public void move(double speed) {
